@@ -47,4 +47,21 @@ def easy_bar_plot(x, y, data, order=None, xlab=None, ylab=None, title=None, grid
         plt.xticks(rotation = x_tick_rot, ha="center")
     if tight_layout:
         fig.tight_layout()
+        
+    # Text box under plot :
+    plt.figtext(
+        0.5,
+        -0.05,
+        """blablabla
+        blablabla
+        """,
+        ha="center",
+        fontsize=10,
+        bbox={
+            "facecolor":"grey",
+            "alpha":0.2,
+            "pad":2
+        }
+    )
+    ;
     plt.show()
